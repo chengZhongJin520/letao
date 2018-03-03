@@ -1,0 +1,25 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container >div{
+  background-color: #fff;
+  height: 240px;
+  margin-top:150px;
+  padding:0;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.panel-header{
+  background-color: #337ab7;
+
+
+}
+.panel-header h4{
+  margin:0;
+  height:60px;
+  line-height: 60px;
+
+}
