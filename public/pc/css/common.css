@@ -21,6 +21,8 @@ html,body{
 }
 .lt_aside{
   position:absolute;
+  transition:all 1s;
+  left:0;
   width: 180px;
   height: 100%;
   background-color: #222d32;
@@ -50,7 +52,6 @@ html,body{
   font-size: 16px;
   color:#fff;
 }
-
 .lt_aside .nav a{
   display: block;
   padding-left:40px;
@@ -67,12 +68,22 @@ html,body{
 .lt_aside .second a{
   padding-left:60px;
 }
+.lt_aside.now{
+ left:-180px;
+}
+
+
+
+
 
 /*右边区域*/
 .lt_main{
+  transition:all 1s;
   margin-left: 180px;
 }
-
+.lt_main.now{
+  margin-left: 0px;
+}
 
 /*路径导航*/
 .lt_header{
