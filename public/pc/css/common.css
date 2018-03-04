@@ -13,9 +13,7 @@
   box-sizing: border-box;
 
 }
-a{
 
-}
 
 
 html,body{
@@ -86,4 +84,20 @@ html,body{
 .lt_header a{
   color:#fff;
   font-size: 16px;
+}
+
+.container-fluid ol {
+  height:30px;
+}
+.breadcrumb {
+  padding: 8px 15px;
+  margin-bottom: 20px;
+  list-style: none;
+  background-color: #f5f5f5;
+  border-radius: 4px;}
+
+.lt_content .charts_1,
+.lt_content .charts_2 {
+  width: 45%;
+  height: 400px;
 }
