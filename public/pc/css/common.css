@@ -20,12 +20,13 @@ html,body{
   height: 100%;
 }
 .lt_aside{
-  position:absolute;
+  position:fixed;
   transition:all 1s;
   left:0;
   width: 180px;
   height: 100%;
   background-color: #222d32;
+  z-index: 1;
 }
 .lt_aside .brand a{
   text-decoration:none;
@@ -83,14 +84,28 @@ html,body{
 }
 .lt_main.now{
   margin-left: 0px;
+
 }
 
 /*路径导航*/
 .lt_header{
-  padding:0 20px;
+  padding:0 20px 0 200px;
   line-height: 50px;
   background-color: #3c8dbc;
   margin-bottom:20px;
+  position: fixed;
+  width: 100%;
+  left:0;
+  top:0;
+  transition:all 1s;
+}
+.lt_header.now{
+  padding-left:20px;
+}
+
+
+.container-fluid{
+  padding-top:50px;
 }
 .lt_header a{
   color:#fff;
@@ -135,3 +150,18 @@ table th{
 .table>#tbody>tr>td{
   vertical-align: middle;
 }
+
+.add_Img{
+  position:relative;
+}
+form .add_Img>label{
+  display: block;
+  margin-bottom:20px;
+  width: 84px;
+}
+/*form .add_Img> [type='file']{*/
+  /*position:absolute;*/
+  /*top:0;*/
+  /*left:0;*/
+  /*opacity:0;*/
+/*}*/

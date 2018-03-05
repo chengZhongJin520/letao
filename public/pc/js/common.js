@@ -48,6 +48,7 @@ $(function(){
   //关闭侧边栏事件
   $('.icon_menu').on('click',function(){
     $('.lt_aside').toggleClass('now');
+    $('.lt_header').toggleClass('now');
     $('.lt_main').toggleClass('now');
   })
 

@@ -5,7 +5,7 @@
   <title>乐淘:二级分类</title>
   <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="lib/nprogress/nprogress.css">
-  <!--<link rel="stylesheet" href="lotao/public/pc/lib">-->
+  <link rel="stylesheet" href="lib/bootstrap-validator/css/bootstrapValidator.min.css">
   <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="css/common.css">
 </head>
@@ -39,7 +39,7 @@
         </div>
       </li>
       <li>
-        <a href="javascript:;">
+        <a href="product.html">
           <span class="glyphicon glyphicon-tags"></span>
           商品管理
         </a>
@@ -130,14 +130,42 @@
       <form id="form-fenlei">
         <div class="modal-body text-danger">
 
-
+          <!--一级菜单-->
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="请输入一级分类的名称" name="categoryName">
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+               <span class='txt'>选择一级分类</span>
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" id="first">
+                
+                  <!--挖个坑放模板-->
+              </ul>
+              <input type="hidden" name="categoryId" class='categoryId'>
+            </div>
           </div>
 
 
+          <!--二级菜单-->
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="请输入二级分类的名称" name="brandName" >
+          </div>
+
+        <!--上传图片-->
+          <div class="form-group add_Img" >
+            <!--<button class='btn btn-default'></button>-->
+            <label for="fileupload" class="btn btn-default btn-sm">上传图片</label>
+            <input type="file" name="pic1" id="fileupload" class="btn " accept='image/gif, image/jpeg,image/jpg,image/png' style="display: none;"   data-url="/category/addSecondCategoryPic">
+          </div>
+            <div class="form-group imgbox">
+              <img src="images/none.png" alt="" width=100 height=100>
+              <input type="hidden" name="brandLogo"  class='brandLogo'>
+              <input type="hidden" name="hot" value="1">
+            </div>
+
+
         </div>
-        <div class="modal-footer">
+        <div class="modal-footer" >
           <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
           <button type="submit" class="btn btn-primary btn_queding">确定</button>
         </div>
@@ -160,7 +188,16 @@
 </script>
 
 
+<!--一级菜单模板-->
+<script type="text/template" id='tmp-first'>
+  {{each rows v i}}
+    <li data-id='{{v.id}}'><a href="javascript:;">{{v.categoryName}}</a></li>
+  {{/each}}
+</script>
+
 <script src="lib/jquery/jquery.min.js"></script>
+<script src='lib/jquery-fileupload/jquery.ui.widget.js'></script>
+<script src="lib/jquery-fileupload/jquery.fileupload.js"></script>
 <script src="lib/artTemplate/template-web.js"></script>
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
