@@ -1,10 +1,11 @@
-index.html<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>乐淘:登录</title>
+  <title>乐淘:一级分类</title>
   <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
-  <!--<link rel="stylesheet" href="lotao/public/pc/lib">-->
+  <link rel="stylesheet" href="lib/bootstrap-validator/css/bootstrapValidator.css">
+  <link rel="stylesheet" href="lib/nprogress/nprogress.css">
   <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="css/common.css">
 </head>
@@ -22,7 +23,7 @@ index.html<!DOCTYPE html>
   <div class="nav">
     <ul>
       <li>
-        <a href="javascript:;" class='active'>
+        <a href="user.html" >
           <span class="glyphicon glyphicon-user"></span>
           用户管理
         </a>
@@ -33,12 +34,12 @@ index.html<!DOCTYPE html>
           分类管理
         </a>
         <div class="second" style="display: none">
-          <a href="first.html">一级分类</a>
+          <a href="first.html" class='active'>一级分类</a>
           <a href="second.html">二级分类</a>
         </div>
       </li>
       <li>
-        <a href="javascript:;">
+        <a href="product.html">
           <span class="glyphicon glyphicon-tags"></span>
           商品管理
         </a>
@@ -55,21 +56,117 @@ index.html<!DOCTYPE html>
     <a href="javascript:;" class='icon_menu pull-left'>
       <span class="glyphicon glyphicon-align-justify"></span>
     </a>
+
     <a href="javascript:;" class='icon_logout pull-right'>
       <span class="glyphicon glyphicon-log-out"></span>
     </a>
   </div>
   <div class="container-fluid">
     <ol class="breadcrumb">
-      <li class="pull-left"><a href="javascript:;">管理系统</a></li>
-      <li class="pull-left"><a href="javascript:;">首页</a></li>
+      <li class="pull-left"><a href="index.html">管理系统</a></li>
+      <li class="pull-left"><a href="javascript:;">分类管理</a></li>
+      <li class="pull-left"><a href="first.html">一级菜单</a></li>
     </ol>
   </div>
+  <div class="lt_content">
+    <!--添加分类-->
+    <button class="btn btn-default btn_add mb_20">添加分类</button>
+    <!--表格分类-->
+    <table class="table table-bordered">
+      <thead>
+      <tr>
+        <th width='20%'>序号</th>
+        <th width='80%'>分类名称</th>
+      </tr>
+      </thead>
+      <tbody>
+      <!--挖个坑-->
+      </tbody>
+    </table>
+  </div>
+
+<!--分页-->
+  <div class="pull-right">
+      <ul class="setPage" id="setPage">
+
+      </ul>
+  </div>
+
 </div>
 
+
+
+<!--logout模态框-->
+
+  <div class="modal fade" tabindex="-1" id="logoutModal" >
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">温馨提示</h4>
+        </div>
+        <div class="modal-body text-danger">
+          <span class="glyphicon glyphicon-info-sign"></span><span>您确定退出学生管理系统吗？</span>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+          <button type="button" class="btn btn-primary btn_logout">确定</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+
+<!--添加分类模态框-->
+
+<div class="modal fade" tabindex="-1" id="addModal" >
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">添加分类</h4>
+      </div>
+      <form id="form-fenlei">
+      <div class="modal-body text-danger">
+
+
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="请输入一级分类的名称" name="categoryName">
+        </div>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="submit" class="btn btn-primary btn_queding">确定</button>
+      </div>
+      </form>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!--模板-->
+<!--<script type="text/template" id='tmp'></script>-->
+
+<!--tab模板-->
+<script type="text/template" id='tmp'>
+{{each rows v i}}
+  <tr>
+    <td>{{(page-1)*size + i + 1}}</td>
+    <td>{{v.categoryName}}</td>
+  </tr>
+  {{/each}}
+</script>
+
+
 <script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
 <script src="lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
-<!--<script src='js'></script>-->
+<script src="lib/nprogress/nprogress.js"></script>
+<script src="js/common.js"></script>
+<script src="js/first.js"></script>
+
 </body>
 </html>

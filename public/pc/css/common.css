@@ -112,3 +112,26 @@ html,body{
   width: 45%;
   height: 400px;
 }
+
+.breadcrumb a{
+  text-decoration: none;
+}
+.breadcrumb li:last-child a{
+  color: #777;
+}
+
+.mb_20{
+  margin-bottom:20px;
+}
+.lt_content{
+  padding-left:20px;
+}
+table td,
+table th{
+  text-align: center;
+  line-height: 38px;
+}
+
+.table>#tbody>tr>td{
+  vertical-align: middle;
+}
