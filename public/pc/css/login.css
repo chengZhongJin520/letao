@@ -6,7 +6,8 @@
 
 .container >div{
   background-color: #fff;
-  height: 240px;
+  /*height: 240px;*/
+  padding:20px 0;
   margin-top:150px;
   padding:0;
   overflow: hidden;
