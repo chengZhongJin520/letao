@@ -4,44 +4,55 @@
   <meta charset="UTF-8">
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <title>乐淘：移动端首页</title>
+  <title>乐淘：移动端分类页</title>
   <link rel="stylesheet" href="lib/mui/css/mui.css">
   <link rel="stylesheet" href="lib/fa/css/font-awesome.css">
   <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/category.css">
   <link rel="icon" href="favicon.ico">
   
 </head>
 <body>
 <div class="lt_container">
   <div class="lt_header mui-clearfix">
-    <a href="javascript:;" ><span class="fa fa-home"></span></a>
+    <a href="javascript:history.go(-1);" ><span class="mui-icon mui-icon-back"></span></a>
     <a href="javascript:;">
       <span class='mui-icon mui-icon-search'></span>
     </a>
-    <h4>乐淘云购</h4>
+    <h4>乐淘分类</h4>
   </div>
-  <div class="lt_main">
-    <!--轮播图-->
-    <div class="lt_banner">
-      <div class="mui-slider">
-        <div class="mui-slider-group mui-slider-loop">
-          <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="images/banner9.png" /></a></div>
-          <div class="mui-slider-item"><a href="#"><img src="images/banner1.png" /></a></div>
-          <div class="mui-slider-item"><a href="#"><img src="images/banner2.png" /></a></div>
-          <div class="mui-slider-item"><a href="#"><img src="images/banner3.png" /></a></div>
-          <div class="mui-slider-item"><a href="#"><img src="images/banner4.png" /></a></div>
-          <div class="mui-slider-item"><a href="#"><img src="images/banner5.png" /></a></div>
-          <div class="mui-slider-item"><a href="#"><img src="images/banner6.png" /></a></div>
-          <div class="mui-slider-item"><a href="#"><img src="images/banner7.png" /></a></div>
-          <div class="mui-slider-item"><a href="#"><img src="images/banner8.jpg" /></a></div>
-          <div class="mui-slider-item"><a href="#"><img src="images/banner9.png" /></a></div>
-          <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="images/banner1.png" /></a></div>
+  <div class="lt_main mui-clearfix">
 
+    <!--左边导航-->
+    <div class='left'>
+    <div class="mui-scroll-wrapper ">
+      <div class="mui-scroll">
+        <div class="lt_first ">
+          <ul>
+
+          <!--挖个坑放导航的模板-->
+
+            </li>
+          </ul>
         </div>
       </div>
     </div>
+    </div>
+    <!--右边品牌-->
+    <div class="right">
+      <div class="mui-scroll-wrapper .mui-scroll-wrapper-r">
+        <div class="mui-scroll">
+          <div class="lt_second ">
+            <ul class='mui-clearfix'>
 
+             <!--二级菜单挖个坑准备躺下-->
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
   </div>
   <div class="lt_footer">
     <ul class="mui-clearfix">
@@ -65,9 +76,35 @@
   </div>
 </div>
 
+<!--一级菜单模板-->
+<script type="text/template" id="tmp-first">
+{{each rows v i}}
+<li data-id='{{v.id}}'>
+  <a href="javascript:;" >{{v.categoryName}}</a>
+</li>
+
+  {{/each}}
+</script>
+
+
+<!--二级模板-->
+<script type="text/template" id="tmp-second">
+{{each rows v i}}
+<li data-id={{v.id}}>
+  <a href="javascript:;">
+    <img src="{{v.brandLogo?v.brandLogo:'/mobile/images/none.png'}}" alt="">
+    <p>{{v.brandName}}</p>
+  </a>
+</li>
+
+  {{/each}}
+</script>
+
+
 <script src='lib/zepto/zepto.min.js'></script>
 <script src="lib/mui/js/mui.js"></script>
-<script src="js/index.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
 <script src="js/common.js"></script>
+<script src="js/category.js"></script>
 </body>
 </html>

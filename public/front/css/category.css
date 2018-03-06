@@ -1,0 +1,68 @@
+/**
+ * Created by Lenovo on 2018/3/6.
+ */
+
+
+/*左边导航*/
+.left{
+  overflow: hidden;
+  float:left;
+  width: 90px;
+  height: 100%;
+  position:relative;
+}
+
+.lt_first{
+  height: 100%;
+  width: 90px;
+
+}
+.lt_first ul{
+  width: 100%;
+}
+.lt_first a{
+  display: block;
+  width: 90px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background-color: pink;
+  border-bottom:1px solid red;
+  border-right:1px solid red;
+  color:#007aff;
+}
+.lt_first a.active{
+  background-color: #fff;
+  border-right:none;
+}
+
+
+/*右边品牌*/
+
+.right{
+  background-color: #fff;
+  margin-left:90px;
+  height:100%;
+  position:relative;
+}
+.right ul{
+  /*margin-left:90px;*/
+}
+.right li{
+  float:left;
+  width: 33.33%;
+}
+.right li a{
+  display: block;
+  width: 100%;
+}
+.right a img{
+  width: 62px;
+  height: 62px;
+  margin:0 auto;
+}
+.right a p{
+  text-align: center;
+  line-height: 22px;
+  margin-bottom:10px;
+}
