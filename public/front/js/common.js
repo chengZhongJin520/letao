@@ -9,3 +9,11 @@ mui(".mui-scroll-wrapper").scroll({
   bounce:true,
   indicators: false
 })
+
+
+var getSearch=function(){
+  var arr=decodeURI(location.search).slice(1).split('=');
+  var obj={};
+  obj[arr[0]]=arr[1];
+  return obj
+}

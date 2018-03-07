@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+
+.lt_header>a.back{
+  float:left;
+}
+
+
+
+
+/*历史记录*/
+.lt_lishi{
+  padding:10px;
+}
+.lt_lishi p span{
+  float:left;
+}
+.lt_lishi p span:nth-child(2){
+  float:right;
+  font-size: 14px;
+}
+.lt_lishi p {
+  margin: 0;
+}
+
+.lt_lishi ul{
+
+}
+.lt_lishi ul li{
+  border:1px dashed red;
+  border-bottom: none;
+  font-size: 12px;
+  line-height: 30px;
+  height: 30px;
+  padding-left: 10px;
+}
+.lt_lishi ul li:last-child{
+  border-bottom:1px dashed red;
+}
+.lt_lishi ul .btn_delete{
+  margin: 3px;
+}

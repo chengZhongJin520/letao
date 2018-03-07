@@ -14,31 +14,4 @@
 }
 
 
-/*商品*/
-.lt_product{
-  padding:10px;
-}
-.lt_product a{
-  text-align: center;
-  float:left;
-  padding:10px;
-  width: 45%;
-  background-color: #fff;
-  margin-bottom:10px;
-  border:1px solid #ccc;
-}
-.lt_product p{
-  /*text-align: center;*/
-  font-size: 14px;
-  margin-bottom:10px;
-  color:#8f8f94;
-}
-.lt_product p span:first-child{
-  color:red;
-}
-.lt_product p span:last-child{
-  text-decoration:line-through;
-}
-.lt_product a:nth-child(2n){
-  float:right;
-}
+
