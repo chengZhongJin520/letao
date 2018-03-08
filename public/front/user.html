@@ -4,42 +4,44 @@
   <meta charset="UTF-8">
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <title>乐淘：移动端首页</title>
+  <title>乐淘：移动端会员中心</title>
   <link rel="stylesheet" href="lib/mui/css/mui.css">
   <link rel="stylesheet" href="lib/fa/css/font-awesome.css">
   <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/user.css">
   <link rel="icon" href="favicon.ico">
   
 </head>
 <body>
 <div class="lt_container">
   <div class="lt_header mui-clearfix">
-    <a href="javascript:;" ><span class="fa fa-home"></span></a>
-    <a href="javascript:;">
-      <span class='mui-icon mui-icon-search'></span>
-    </a>
-    <h4>乐淘云购</h4>
+    <a href="javascript:history.go(-1);" style='float:left;'><span class="mui-icon mui-icon-back"></span></a>
+    <h4>会员中心</h4>
   </div>
   <div class="lt_main">
     <!--轮播图-->
-    <div class="lt_banner">
-      <div class="mui-slider">
-        <div class="mui-slider-group mui-slider-loop">
-          <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="images/banner9.png" /></a></div>
-          <div class="mui-slider-item"><a href="#"><img src="images/banner1.png" /></a></div>
-          <div class="mui-slider-item"><a href="#"><img src="images/banner2.png" /></a></div>
-          <div class="mui-slider-item"><a href="#"><img src="images/banner3.png" /></a></div>
-          <div class="mui-slider-item"><a href="#"><img src="images/banner4.png" /></a></div>
-          <div class="mui-slider-item"><a href="#"><img src="images/banner5.png" /></a></div>
-          <div class="mui-slider-item"><a href="#"><img src="images/banner6.png" /></a></div>
-          <div class="mui-slider-item"><a href="#"><img src="images/banner7.png" /></a></div>
-          <div class="mui-slider-item"><a href="#"><img src="images/banner8.jpg" /></a></div>
-          <div class="mui-slider-item"><a href="#"><img src="images/banner9.png" /></a></div>
-          <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="images/banner1.png" /></a></div>
-
-        </div>
-      </div>
+    <ul class="mui-table-view">
+      <li class="mui-table-view-cell">
+        <a class="mui-navigate-right" class='user'>
+          <img src="images/user.jpg" alt="" class='mui-media-object mui-pull-left'>
+          <div class="mui-media-body">
+            root
+            <p class='mui-ellipsis'>13357990639</p>
+          </div>
+        </a>
+      </li>
+      <li class="mui-table-view-cell">
+        <a class="mui-navigate-right">账号与安全</a>
+      </li>
+      <li class="mui-table-view-cell">
+        <a class="mui-navigate-right">我的购物车</a>
+      </li>
+      <li class="mui-table-view-cell">
+        <a class="mui-navigate-right">收货地址管理</a>
+      </li>
+    </ul>
+    <div class='logout'>
+      <button class="btn_logout mui-btn mui-btn-default">立即退出</button>
     </div>
 
   </div>
@@ -67,7 +69,8 @@
 
 <script src='lib/zepto/zepto.min.js'></script>
 <script src="lib/mui/js/mui.js"></script>
-<script src="js/index.js"></script>
+
 <script src="js/common.js"></script>
+<script src="js/user.js"></script>
 </body>
 </html>
