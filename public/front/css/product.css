@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+
+.item{
+  border-top:1px solid #ccc;
+  padding:10px;
+}
+.lt_container{
+  background-color: #fff;
+}
+.price{
+  color:red;
+}
+.oldPrice{
+  text-decoration:line-through;
+  font-size: 12px;
+}
+
+.num span{
+  font-size: 14px;
+}
+.num i{
+  font-style: normal;
+}
+.size span{
+  display: inline-block;
+  padding: 5px;
+  background-color: #CCCCCC;
+  border:1px solid red;
+  font-size: 14px;
+}
+.size span.active{
+  background-color: #069;
+}
+
+.lt_footer {
+  /*padding: 10px;*/
+  background-color: #eee;
+  border-color: red;
+}

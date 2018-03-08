@@ -232,8 +232,8 @@ $('.btn_add').on('click',function(){
     e.preventDefault();
     var data=$form.serialize();
     data += '&picName1="'+result[0].picName+'"&picAddr1="'+result[0].picAddr+'"';
-    data += '&picName1="'+result[1].picName+'"&picAddr1="'+result[1].picAddr+'"';
-    data += '&picName1="'+result[2].picName+'"&picAddr1="'+result[2].picAddr+'"';
+    data += '&picName2="'+result[1].picName+'"&picAddr2="'+result[1].picAddr+'"';
+    data += '&picName3="'+result[2].picName+'"&picAddr3="'+result[2].picAddr+'"';
     $.ajax({
       type:'post',
       url:'/product/addProduct',

@@ -83,7 +83,12 @@
   {{else}}
   {{each data v i}}
   <a href="product.html?productId={{v.id}}">
+    {{if v.pic.length ===0}}
+    <img src="images/none.png" alt="">
+    {{else}}
     <img src="{{v.pic[0].picAddr}}" alt="">
+    {{/if}}
+
     <p>{{v.proName}} </p>
     <p><span class=" price">{{v.price}}</span> <span class="oldprice">{{v.oldPrice}}</span></p>
     <button class='mui-btn mui-btn-primary'>立即购买</button>
