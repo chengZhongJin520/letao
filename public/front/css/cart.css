@@ -6,6 +6,7 @@
 }
 .lt_main ul{
     padding:0 10px;
+    background-color: #fff;
 }
 .lt_main li{
     padding: 10px;
@@ -42,4 +43,25 @@
     position: absolute;
     bottom:15px;
     left:15px;
+}
+
+.lt_order div{
+    line-height: 30px;
+    color:red;
+    font-size: 14px;    
+    padding-left: 10px;
+}
+.lt_order a{
+    color:#fff;
+    height:30px;
+    /* line-height: 30px; */
+}
+.lt_order{
+    width: 100%;
+    position: absolute;
+    bottom:55px;
+    left:0;
+    z-index: 10;
+    background-color:#eee;
+    
 }
