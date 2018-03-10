@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+
+.lt_main{
+
+}
+.lt_main ul{
+    padding:0 10px;
+}
+.lt_main li{
+    padding: 10px;
+    border-bottom:1px solid #ccc;
+    position:relative;
+}
+.lt_main img{
+    display: block;
+    width: 60px;
+    height: 60px;
+}
+.lt_main .data{
+    /* background-color:#555555; */
+    overflow: hidden;
+    padding-left:10px;
+}
+.lt_main .proName{
+    height: 42px;
+    margin-bottom:5px;
+    color:#000;
+}
+.lt_main p{
+    margin: 0;
+    line-height: 21px;
+    font-size:14px;
+}
+.lt_main .price{
+    color:red;
+}
+.lt_main .oldPrice{
+    text-decoration:line-through;
+}
+.lt_main li [type='checkbox']{
+    position: absolute;
+    bottom:15px;
+    left:15px;
+}

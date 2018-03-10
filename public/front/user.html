@@ -21,20 +21,14 @@
   <div class="lt_main">
     <!--轮播图-->
     <ul class="mui-table-view">
-      <li class="mui-table-view-cell">
-        <a class="mui-navigate-right" class='user'>
-          <img src="images/user.jpg" alt="" class='mui-media-object mui-pull-left'>
-          <div class="mui-media-body">
-            root
-            <p class='mui-ellipsis'>13357990639</p>
-          </div>
-        </a>
+      <li class="mui-table-view-cell user" >
+       <!--挖个坑-->
       </li>
       <li class="mui-table-view-cell">
         <a class="mui-navigate-right">账号与安全</a>
       </li>
       <li class="mui-table-view-cell">
-        <a class="mui-navigate-right">我的购物车</a>
+        <a class="mui-navigate-right" href="cart.html">我的购物车</a>
       </li>
       <li class="mui-table-view-cell">
         <a class="mui-navigate-right">收货地址管理</a>
@@ -69,8 +63,20 @@
 
 <script src='lib/zepto/zepto.min.js'></script>
 <script src="lib/mui/js/mui.js"></script>
-
+<script src='lib/artTemplate/template-web.js'></script>
 <script src="js/common.js"></script>
 <script src="js/user.js"></script>
+
+
+<!--模板-->
+<script type='text/template' id='tmp'>
+  <a class="mui-navigate-right" class='user'>
+    <img src="images/user.jpg" alt="" class='mui-media-object mui-pull-left'>
+    <div class="mui-media-body">
+     {{username}}
+      <p class='mui-ellipsis'>{{mobile}}</p>
+    </div>
+  </a>
+</script>
 </body>
 </html>
