@@ -25,7 +25,7 @@
       <div class="mui-scroll-wrapper">
         <div class="mui-scroll">
           <ul>
-            <!-- 挖个坑 -->
+
           </ul>
         </div>
       </div>
@@ -73,27 +73,67 @@
   <script type="text/template" id="tmp">
     {{each obj v i}}
     <li class="mui-clearfix">
-      <div class="img mui-pull-left">
-        {{if v.pic.length
-        <=0}} <img src="images/none.jpg" alt="">
-          {{else}}
-          <img src="{{v.pic[0].picAddr}}" alt=""> {{/if}}
-      </div>
-      <div class="data">
-        <p class="proName mui-ellipsis-2">{{v.proName}}</p>
-        <p>
-          <span class="price">&yen;{{v.price}}</span>
-          <span class="oldPrice">&yen;{{v.oldPrice}}</span>
-          <span class="mui-pull-right">{{v.productNum}}双</span>
-        </p>
-        <p>
-          鞋码 ：
-          <span>{{v.size}}码</span>
-        </p>
-      </div>
-      <input type="checkbox" name="" id="">
+
+      <ol>
+        <li class="mui-table-view-cell mui-transitioning">
+          <div class="mui-slider-right mui-disabled">
+            <a data-size='{{v.size}}' data-product-Size="{{v.productSize}}" data-id='{{v.id}}' data-num='{{v.num}}'
+                data-product-Num='{{v.productNum}}'
+            
+            class="mui-btn mui-btn-blue mui-icon mui-icon-compose btn_edit" style="transform: translate(0px, 0px);"></a>
+            <a data-id='{{v.id}}' class="mui-btn mui-btn-red mui-icon mui-icon-trash btn_delete" style="transform: translate(-90px, 0px);"></a>
+          </div>
+          <div class="mui-slider-handle" style="transform: translate(0px, 0px);">
+            <div class="mui-table-cell mui-clearfix" id="box">
+              <div class="img mui-pull-left">
+                {{if v.pic.length
+                <=0}} <img src="images/none.jpg" alt="">
+                  {{else}}
+                  <img src="{{v.pic[0].picAddr}}" alt=""> {{/if}}
+              </div>
+              <div class="data">
+                <p class="proName mui-ellipsis-2">{{v.proName}}</p>
+                <p>
+                  <span class="price">&yen;{{v.price}}</span>
+                  <span class="oldPrice">&yen;{{v.oldPrice}}</span>
+                  <span class="mui-pull-right">{{v.num}}双</span>
+                </p>
+                <p>
+                  鞋码 ：
+                  <span>{{v.size}}码</span>
+                </p>
+              </div>
+              <input type="checkbox" data-num='{{v.num}}' data-price='{{v.price}}'>
+            </div>
+          </div>
+        </li>
+      </ol>
     </li>
     {{/each}}
+  </script>
+
+
+  <script type="text/html" id="editTpl">
+
+    <div class="lt_edit_size">
+      尺码：
+      <%
+          var temp = productSize.split("-");
+          for(var i = +temp[0]; i <= temp[1]; i++) {
+        %>
+        <span class="{{i == size?'active':''}} span">{{i}}</span>
+        <% } %>
+    </div>
+
+    <div class="lt_edit_num">
+      数量：
+      <div class="mui-numbox" data-numbox-step='1' data-numbox-min='1' data-numbox-max='{{productNum}}'>
+        <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+        <input class="mui-numbox-input" type="number" value="{{num}}" />
+        <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+      </div>
+    </div>
+
   </script>
 
 

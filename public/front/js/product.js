@@ -35,7 +35,7 @@
             mui.toast('请选择尺码');
             return;
           }
-
+          console.log(size,num);
 
           $.ajax({
             type:'post',
